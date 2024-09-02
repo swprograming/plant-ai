@@ -11,7 +11,7 @@ const About = () => {
     >
       <div className='flex justify-center items-center min-h-screen'>
         <div className='max-w-[800px] w-full bg-white bg-opacity-70 shadow-lg rounded-lg p-6 border border-transparent hover:border-[#00df9a] transition duration-300'>
-          <h1 className='text-3xl font-bold text-center text-[#00df9a] mb-4'>{t('about')}</h1>
+          <h1 className='text-3xl font-bold text-center text-[#00df9a] mb-4'>{t('abt')}</h1>
           <p className='text-gray-700 mb-4'>
             {t('ap1')}
           </p>
