@@ -42,7 +42,7 @@ const Advanced = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/predict_crop/advanced', requestData);
+      const response = await axios.post('https://backend-plant-ai.onrender.com/predict_crop/advanced', requestData);
       setPredictionData(response.data);
     } catch (error) {
       console.error('Error fetching the prediction:', error);
