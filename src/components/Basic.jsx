@@ -30,7 +30,7 @@ const Basic = () => {
     setLocationsList([]);
 
     try {
-      const response = await fetch(`http://localhost:5000/geocode?location=${location}`);
+      const response = await fetch(`https://backend-plant-ai.onrender.com/geocode?location=${location}`);
       const data = await response.json();
 
       if (data.length > 0) {
@@ -64,7 +64,7 @@ const Basic = () => {
     try {
       const payload = { location: locationData.name };
 
-      const response = await fetch('http://localhost:5000/predict_crop/basic', {
+      const response = await fetch('https://backend-plant-ai.onrender.com/predict_crop/basic', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
