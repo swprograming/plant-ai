@@ -10,6 +10,7 @@
     "Average Annual Rainfall": "Average Annual Rainfall",
     "pH Value": "pH Value",
     "Predicted Crop": "Predicted Crop",
+    "logo": "Plant Ai",
     "welcome": "Welcome to Plant AI",
     "getStarted": "Get Started",
     "home": "Home",
@@ -38,6 +39,29 @@
     "pigeonpeas": "Pigeonpeas",
     "pomegranate": "Pomegranate",
     "rice": "Rice",
-    "watermelon": "Watermelon"
+    "watermelon": "Watermelon",
+    "p1": "At Plant AI, we utilize advanced analytics to provide personalized recommendations for crop planting and management. Our innovative platform combines local climate data with AI-driven insights to help you make informed decisions for optimal growth.",
+    "p2": "We are committed to supporting sustainable agriculture practices and empowering farmers with the knowledge they need to succeed.",
+    "ba1": "More about Us",
+    "c1p1": "Discover the best crops to plant based on your specific location and local climate conditions.",
+    "c1p2": "Location-specific crop suggestions",
+    "c1p3": "Easy-to-use",
+    "c1b1": "",
+    "c2p1": "Get precise crop recommendations based on soil, nutrients, and climate data.",
+    "c2p2": "Input-driven crop strategies",
+    "c2p3": "Advanced analytics for yield optimization",
+    "c2b1": "",
+    "fp1": "At Plant AI, we harness the power of artificial intelligence to help you grow the best crops for your local environment. Our mission is to empower farmers and gardening enthusiasts with data-driven insights that lead to sustainable and fruitful harvests.",
+    "fp2": "Join us in revolutionizing agriculture through technology. Follow us on social media for the latest updates, tips, and resources!",
+    "ap1": "At Plant AI, we are dedicated to revolutionizing the way we approach agriculture. By leveraging the power of artificial intelligence, we provide farmers and gardening enthusiasts with tailored insights and recommendations for optimal crop growth. Our platform combines local climate data, soil conditions, and advanced analytics to empower users to make informed decisions.",
+    "ap2": "Our mission is to promote sustainable farming practices that benefit both the environment and the agricultural community. We believe that with the right knowledge and tools, anyone can cultivate a thriving garden or farm.",
+    "ap3": "Join us on our journey to enhance agriculture through technology and innovation. Together, we can grow a greener future!",
+    "adt1": "Crop Recommender",
+    "adt2": "Recommended Crop",
+    "adp1": "No plant available yet.",
+    "er": "No crop information available for the prediction.",
+    "Probability": "Probability"
+    
+    
 }
   

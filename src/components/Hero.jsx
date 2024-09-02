@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 const Hero = ({ onGetStarted }) => {
   const { t } = useTranslation();
 
-  // Define an array of crop keys (instead of names)
   const cropKeys = [
     'apple',
     'banana',

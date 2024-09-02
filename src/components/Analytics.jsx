@@ -9,17 +9,16 @@ const Analytics = () => {
       <div className='max-w-[1200px] mx-auto grid md:grid-cols-2 gap-8'>
         <img className='w-[500px] mx-auto my-4 rounded-lg shadow-lg' src={Laptop} alt="Laptop showing analytics" />
         <div className='flex flex-col justify-center'>
-          <p className='text-black text-xl uppercase'>{t('About Us')}</p>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>{t('What Sets Us Apart')}</h1>
           <p className='text-gray-700'>
-            At Plant AI, we utilize advanced analytics to provide personalized recommendations for crop planting and management. Our innovative platform combines local climate data with AI-driven insights to help you make informed decisions for optimal growth.
+            {t('p1')}
           </p>
           <p className='py-2 text-gray-700'>
-            We are committed to supporting sustainable agriculture practices and empowering farmers with the knowledge they need to succeed.
+            {t('p2')}
           </p>
           <a href="/About">
-            <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 transition-transform transform hover:scale-105'>
-              More About Us
+            <button className='bg-[#00df9a] text-black w-[250px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3 transition-transform transform hover:scale-105'>
+              {t('ba1')}
             </button>
           </a>
         </div>

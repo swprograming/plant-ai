@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import bg from '../assets/bg.jpg';
 import { cropData } from './Data';
+import { useTranslation } from 'react-i18next';
 
 const Advanced = () => {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  
   const [formData, setFormData] = useState({
     N: '',
     P: '',
@@ -54,30 +58,33 @@ const Advanced = () => {
 
   const renderPrediction = () => {
     if (!predictionData) {
-      return <p className="text-black">No prediction available yet.</p>;
+      return <p className="text-black">{t('adp1')}</p>;
     }
 
     const cropName = predictionData.rf_model_prediction.toLowerCase();
     const cropInfo = cropData[cropName] || null;
 
+    if (!cropInfo) {
+      return <p className="text-black">{t('adp2')}</p>; // Handle case when cropInfo is not found
+    }
+
+    const cropTitle = cropInfo.title[currentLanguage] || cropInfo.title.en;
+    const cropDescription = cropInfo.description[currentLanguage] || cropInfo.description.en;
+
     return (
       <div className="flex flex-col items-center justify-center">
-        {cropInfo ? (
-          <div className="flex flex-col items-center">
-            <img
-              src={cropInfo.imageUrl}
-              alt={cropInfo.title}
-              className="mb-2 rounded-md shadow-md"
-            />
-            <div className="text-center">
-              <h2 className="text-lg font-bold text-black">{cropInfo.title}</h2>
-              <p className="text-gray-600">Probability: {predictionData.rf_model_probability.toFixed(2)}%</p>
-              <p className="text-gray-700">{cropInfo.description}</p>
-            </div>
+        <div className="flex flex-col items-center">
+          <img
+            src={cropInfo.imageUrl}
+            alt={cropTitle}
+            className="mb-2 rounded-md shadow-md"
+          />
+          <div className="text-center">
+            <h2 className="text-lg font-bold text-black">{cropTitle}</h2>
+            <p className="text-gray-600">{t('Probability')}: {predictionData.rf_model_probability.toFixed(2)}%</p>
+            <p className="text-gray-700">{cropDescription}</p>
           </div>
-        ) : (
-          <p className="text-black">No crop information available for the prediction.</p>
-        )}
+        </div>
       </div>
     );
   };
@@ -90,17 +97,17 @@ const Advanced = () => {
       <main className="flex flex-col items-center justify-center w-full px-4 md:px-20 text-center py-8">
         <div className="bg-white bg-opacity-80 rounded-2xl shadow-2xl flex flex-col md:flex-row w-full md:w-2/3 max-w-4xl">
           <div className="w-full md:w-3/5 p-6">
-            <h1 className="text-black text-3xl font-bold text-center mb-4">Crop Recommender</h1>
+            <h1 className="text-black text-3xl font-bold text-center mb-4">{t('adt1')}</h1>
             <form onSubmit={handleSubmit} className="mt-4">
               {Object.keys(formData).map((key) => {
                 const labels = {
-                  N: 'Amount of Nitrogen in soil',
-                  P: 'Amount of Phosphorus in soil',
-                  K: 'Amount of Potassium in soil',
-                  temperature: 'Temperature in Celsius',
-                  humidity: 'Humidity (%)',
-                  ph: 'pH value of soil',
-                  rainfall: 'Rainfall (mm)',
+                  N: t('Amount of Nitrogen in soil'),
+                  P: t('Amount of Phosphorus in soil'),
+                  K: t('Amount of Potassium in soil'),
+                  temperature: t('Temperature in Celsius'),
+                  humidity: t('Humidity (%)'),
+                  ph: t('pH value of soil'),
+                  rainfall: t('Rainfall (mm)'),
                 };
                 return (
                   <div key={key} className="flex flex-col mb-4">
@@ -118,12 +125,12 @@ const Advanced = () => {
                 );
               })}
               <button type="submit" className="bg-[#00df9a] w-full rounded-xl font-medium py-2 text-black transition duration-300 hover:bg-[#00c78b]">
-                {loadingStatus ? 'Loading...' : 'Predict Crop'}
+                {loadingStatus ? 'Loading...' : t('Find Crop')}
               </button>
             </form>
           </div>
           <div className="w-full md:w-2/5 p-4 flex flex-col items-center overflow-y-auto">
-            <h1 className="text-black text-xl md:text-2xl font-bold text-center mb-4">Recommended Crop</h1>
+            <h1 className="text-black text-xl md:text-2xl font-bold text-center mb-4">{t('adt2')}</h1>
             {renderPrediction()}
           </div>
         </div>

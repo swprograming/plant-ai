@@ -23,36 +23,72 @@ import watermelonImage from "../images/crop/watermelon.jpg"
 
 
 export const cropData = {
-    apple:{
-        title:"Apple Crop",
-        imageUrl:appleImage,
-        description: "Normally the apples are ready for harvest from September-October except in the Nilgiris where the season is from April to July. The fruits mature within 130-150 days after the full bloom stage depending upon the variety grown. The ripening of fruits is associated with the change in colour, texture, quality and the development of the characteristic flavour. The fruits at the time of harvest should be uniform, firm and crisp. The colour of the skin at maturity ranges from yellow-red depending on the variety. However, the optimum time of harvest depends on fruit quality and intended period of storage. Due to the introduction of dwarf rootstock hand picking is recommended as it reduces bruising due to fruit fall during mechanical harvesting."
-    },
-    banana:{
-        title:"Bana Crop",
-        imageUrl:bananaImage,
-        description: "Banana is harvested when the fruit is slightly or fully mature depending on the market preferences. For long distance transportation, harvesting is done at 75-80 % maturity.  The fruit is climacteric and can reach consumption stage after ripening operation. The planted crop gets ready for harvest within 12-15 months of planting and the main harvesting season of banana is from September to April.  Bunches attain maturity from 90-150 days after flowering depending upon variety, soil, weather condition and elevation. Bunch should be harvested when fingers of second hand from top are 3/4 rounded with the help of sharp sickle 30cm above the first hand. Harvest may be delayed upto 100-110 days after opening of the first hand. Harvested bunch should generally be collected in well padded tray or basket and brought to collection site. Bunches should be kept out of light after harvest, since this hastens ripening and softening. For local consumption, hands are often left on stalks and sold to retailers."        
-    },
-    blackgram:{
-        title:"Blackgram Crop",
-        imageUrl:blackgramImage,
-        description:"Urd should be harvested when 70-80 % pods matured and most of the pods turn black. Over maturity may result in shattering. Harvested crop should be dried on threshing floor for few days and then threshed. Threshing can be done either manually or by trampling under the feet of bullocks. The clean seeds should be sun dried for 3 - 4 days to bring their moisture content at 8-10% to safely store in appropriate bins."
-    },
-    chickpea:{
-        title:"ChickPea Crop",
-        imageUrl:chickpeaImage,
-        description:"The plant grows to 20–50 cm (8–20 in) high and has small, feathery leaves on either side of the stem. Chickpeas are a type of pulse, with one seedpod containing two or three peas. It has white flowers with blue, violet, or pink veins. Several varieties of chickpea are cultivated throughout the world. Desi chana closely resembles both seeds found on archaeological sites and the wild plant ancestor of domesticated chickpeas. Cicer reticulatum only grows in southeast Turkey, where chickpeas are believed to have originated."
-    },
-    coconut:{
-        title:"Coconut Crop",
-        imageUrl:coconutImage,
-        description:"Coconut palms are normally cultivated in hot and wet tropical climates. They need year round warmth and moisture to grow well and fruit. Coconut palms are hard to establish in dry climates, and cannot grow there without frequent irrigation; in drought conditions, the new leaves do not open well, and older leaves may become desiccated; fruit also tends to be shed."
-    },
-    coffee:{
-        title:"Coffee Crop",
-        imageUrl:coffeeImage,
-        description:"The traditional method of planting coffee is to place 20 seeds in each hole at the beginning of the rainy season. This method loses about 50% of the seeds' potential, as about half fail to sprout. A more effective process of growing coffee, used in Brazil, is to raise seedlings in nurseries that are then planted outside at six to twelve months. Coffee is often intercropped with food crops, such as corn, beans, or rice during the first few years of cultivation as farmers become familiar with its requirements. Coffee plants grow within a defined area between the tropics of Cancer and Capricorn, termed the bean belt or coffee belt."
-    },
+    apple: {
+        title: {
+          en: 'Apple Crop',
+          am: 'አፕል ክትር'
+        },
+        description: {
+          en: 'Normally the apples are ready for harvest from September-October except in the Nilgiris where the season is from April to July. The fruits mature within 130-150 days after the full bloom stage depending upon the variety grown. The ripening of fruits is associated with the change in colour, texture, quality and the development of the characteristic flavour. The fruits at the time of harvest should be uniform, firm and crisp. The colour of the skin at maturity ranges from yellow-red depending on the variety. However, the optimum time of harvest depends on fruit quality and intended period of storage. Due to the introduction of dwarf rootstock hand picking is recommended as it reduces bruising due to fruit fall during mechanical harvesting.',
+          am: 'በመደበኛው ሁኔታ አፕል እንደ ምንም ከሴፕቴምበር እስከ ኦክቶበር ለተከለ እንደ ሚጠበቅ ነው። ከዚያ በሚከተለው ቦታ በኢልንግረን በኦፕርከን እስከ ጁላይ እንዲሁ ምንም ይጠበቃል። እንደከረባው እርምጃ ልማት ከትኩስ ቀን እንደ 130-150 ቀን ላይ ይሆናል። የሽምግርም ሂደት ይደርሳል። በዚህ ጊዜ ሆኖ አንድ ሙሉ እንዲሆን ማሻሻያ ሁሉ ይካሄዳል።'
+        },
+        imageUrl: appleImage
+      },
+      banana: {
+        title: {
+          en: 'Banana Crop',
+          am: 'ባናና ክትር'
+        },
+        description: {
+          en: 'Banana is harvested when the fruit is slightly or fully mature depending on the market preferences. For long distance transportation, harvesting is done at 75-80 % maturity.  The fruit is climacteric and can reach consumption stage after ripening operation. The planted crop gets ready for harvest within 12-15 months of planting and the main harvesting season of banana is from September to April.  Bunches attain maturity from 90-150 days after flowering depending upon variety, soil, weather condition and elevation. Bunch should be harvested when fingers of second hand from top are 3/4 rounded with the help of sharp sickle 30cm above the first hand. Harvest may be delayed upto 100-110 days after opening of the first hand. Harvested bunch should generally be collected in well padded tray or basket and brought to collection site. Bunches should be kept out of light after harvest, since this hastens ripening and softening. For local consumption, hands are often left on stalks and sold to retailers.',
+          am: 'ባናና የአበልን ባለአንደኛ እንደ ማቆሚያው እንደ ትኩስ ተዘግቦ ማስተላለፍ አቅርቦለት። እንደ ማንበብ ወቅት በቅድሚያ ተወዳጅ ከሴፕቴምበር እስከ ኦክቶበር አብንተኛ እንደ ማስተዋወቅ ይሆናል።'
+        },
+        imageUrl: bananaImage
+      },
+      blackgram: {
+        title: {
+          en: 'Blackgram Crop',
+          am: 'ጥቁር ተክል'
+        },
+        description: {
+          en: 'Urd should be harvested when 70-80 % pods matured and most of the pods turn black. Over maturity may result in shattering. Harvested crop should be dried on threshing floor for few days and then threshed. Threshing can be done either manually or by trampling under the feet of bullocks. The clean seeds should be sun dried for 3 - 4 days to bring their moisture content at 8-10% to safely store in appropriate bins.',
+          am: 'የሚሰራው የጥቁር ተክል ከ70-80 በመሆኑ እንዲጠበቅ በማስክት በአቅርቦለት ሰዓታት እንደ አንደኛው ሊያድን አለበት።'
+        },
+        imageUrl: blackgramImage
+      },
+      chickpea: {
+        title: {
+          en: 'Chickpea Crop',
+          am: 'ቺክፒ ክትር'
+        },
+        description: {
+          en: 'The plant grows to 20–50 cm (8–20 in) high and has small, feathery leaves on either side of the stem. Chickpeas are a type of pulse, with one seedpod containing two or three peas. It has white flowers with blue, violet, or pink veins. Several varieties of chickpea are cultivated throughout the world. Desi chana closely resembles both seeds found on archaeological sites and the wild plant ancestor of domesticated chickpeas. Cicer reticulatum only grows in southeast Turkey, where chickpeas are believed to have originated.',
+          am: 'በጊዜው ለሚከተለው ከሆነ ይህ ማስታወቂያ በሰከላችሁ ይችላል። በቅንብስ ሁኔታ ከባሪያዎቹ ባለው ጋር ይሰራል።'
+        },
+        imageUrl: chickpeaImage
+      },
+      coconut: {
+        title: {
+          en: 'Coconut Crop',
+          am: 'ኮኮንት ክትር'
+        },
+        description: {
+          en: 'Coconut palms are normally cultivated in hot and wet tropical climates. They need year round warmth and moisture to grow well and fruit. Coconut palms are hard to establish in dry climates, and cannot grow there without frequent irrigation; in drought conditions, the new leaves do not open well, and older leaves may become desiccated; fruit also tends to be shed.',
+          am: 'ኮኮንት የሚሰራው በሙቅ እና እንዲሁም ውቅር አካባቢዎች እንደ አውሎ አይካልም። በረብስ ግምት በተቋቋማ እንዲሁም የእንቅልፍ ጊዜው ሲሆን።'
+        },
+        imageUrl: coconutImage
+      },
+      coffee: {
+        title: {
+          en: 'Coffee Crop',
+          am: 'ቡና ክትር'
+        },
+        description: {
+          en: 'The traditional method of planting coffee is to place 20 seeds in each hole at the beginning of the rainy season. This method loses about 50% of the seeds\' potential, as about half fail to sprout. A more effective process of growing coffee, used in Brazil, is to raise seedlings in nurseries that are then planted outside at six to twelve months. Coffee is often intercropped with food crops, such as corn, beans, or rice during the first few years of cultivation as farmers become familiar with its requirements. Coffee plants grow within a defined area between the tropics of Cancer and Capricorn.',
+          am: 'በተለምዶ የቡና መምጣት የምንም በሚደርስበት ዕድል እንደ ባርነት ሂደት ማስተዋወቅ።'
+        },
+        imageUrl: coffeeImage
+      },
     cotton:{
         title:"Cotton Crop",
         imageUrl:cottonImage,

@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Basic from "./components/Basic";
 import Advanced from "./components/Advanced";
 import About from "./components/About";
-import './i18n'; // Ensure i18n is imported for translations
+import './i18n';
 
 function App() {
   return (

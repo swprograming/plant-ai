@@ -1,10 +1,10 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Import useTranslation hook
+import { useTranslation } from 'react-i18next';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useState } from 'react';
 
 const NavBar = () => {
-  const { i18n } = useTranslation(); // Get i18n instance
+  const { i18n } = useTranslation();
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -12,12 +12,13 @@ const NavBar = () => {
   };
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng); // Change language
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
   };
 
   return (
     <div className="flex justify-between items-center h-22 max-w-[1240px] mx-auto px-2 ">
-      <h1 className="w-full text-3xl font-bold text-[#00df9a]">Plant Ai</h1>
+      <h1 className="w-full text-3xl font-bold text-[#00df9a]">{i18n.t('logo')}</h1>
       <ul className="hidden md:flex">
         <li className="p-4 hover:text-[#00df9a] transition duration-300"><a href="/">{i18n.t('home')}</a></li>
         <li className="p-4 hover:text-[#00df9a] transition duration-300"><a href="/basic">{i18n.t('basic')}</a></li>

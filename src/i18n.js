@@ -6,17 +6,17 @@ i18n
   .init({
     resources: {
       en: {
-        translation: require('./locales/en/translation.json')
+        translation: require('./locales/en/translation.json'),
       },
       am: {
-        translation: require('./locales/amh/translation.json')
-      }
+        translation: require('./locales/amh/translation.json'),
+      },
     },
-    lng: 'en', // default language
+    lng: localStorage.getItem('language') || 'en', // Load language from localStorage or use default
     fallbackLng: 'en',
     interpolation: {
-      escapeValue: false // react already escapes values
-    }
+      escapeValue: false, // React already escapes values
+    },
   });
 
 export default i18n;
