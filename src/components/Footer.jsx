@@ -1,0 +1,38 @@
+import React from 'react';
+import {
+    FaInstagram,
+    FaFacebookSquare,
+    FaGithubSquare,
+} from 'react-icons/fa';
+
+const Footer = () => {
+  return (
+    <div className='bg-[#1a1a1a] text-white py-10 px-4'>
+      <div className='max-w-[1200px] mx-auto grid lg:grid-cols-1 gap-8 text-center'>
+        <h1 className="text-4xl font-bold text-[#00df9a] mb-4">Plant AI</h1>
+        <p className='py-4'>
+          At Plant AI, we harness the power of artificial intelligence to help you grow the best crops for your local environment. Our mission is to empower farmers and gardening enthusiasts with data-driven insights that lead to sustainable and fruitful harvests.
+        </p>
+        <p className='py-2'>
+          Join us in revolutionizing agriculture through technology. Follow us on social media for the latest updates, tips, and resources!
+        </p>
+        <div className='flex justify-center my-6 space-x-4'>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='transition-transform transform hover:scale-110'>
+            <FaFacebookSquare size={30} />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='transition-transform transform hover:scale-110'>
+            <FaInstagram size={30} />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='transition-transform transform hover:scale-110'>
+            <FaGithubSquare size={30} />
+          </a>
+        </div>
+        <p className='text-sm mt-4'>
+          &copy; {new Date().getFullYear()} Plant AI. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;
