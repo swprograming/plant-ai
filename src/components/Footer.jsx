@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import {
     FaInstagram,
     FaFacebookSquare,
-    FaGithubSquare,
 } from 'react-icons/fa';
 
 const Footer = () => {
@@ -24,9 +23,6 @@ const Footer = () => {
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='transition-transform transform hover:scale-110'>
             <FaInstagram size={30} />
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='transition-transform transform hover:scale-110'>
-            <FaGithubSquare size={30} />
           </a>
         </div>
         <p className='text-sm mt-4'>
