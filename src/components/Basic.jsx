@@ -155,7 +155,7 @@ const Basic = () => {
               <p className="text-center">{t('Humidity')}: <span className="font-semibold">{result['Humidity (%)']}</span></p>
               <p className="text-center">{t('Average Annual Rainfall')}: <span className="font-semibold">{result['Average Annual Rainfall (mm)']}</span></p>
               <p className="text-center">{t('pH Value')}: <span className="font-semibold">{result.pH_Value}</span></p>
-              <p className="text-center">{t('Predicted Crop')}: <span className="font-semibold">{result.basic_final_prediction}</span></p>
+              <p className="text-center">{t('Predicted Crop')}: <span className="font-semibold">{t(result.basic_final_prediction)}</span></p>
               <div className="flex justify-center mt-2">
                 {result.basic_final_prediction && (
                   <img
