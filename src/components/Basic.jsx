@@ -61,42 +61,35 @@ const Basic = () => {
 
   const handleFindCrop = async () => {
     if (!selectedLocation) {
-        setLocationError('Please select a location before finding crops.');
-        return;
+      setLocationError('Please select a location before finding crops.');
+      return;
     }
 
     setLoadingCrop(true);
     setLocationError(null);
-
     try {
-        const payload = { location: selectedLocation.display_name };
+      const payload = { location: selectedLocation.display_name }; // Use display_name for prediction
 
-        console.log('Sending payload:', payload); // Debugging line
+      const response = await fetch('https://backend-plant-ai.onrender.com/predict_crop/basic', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
 
-        const response = await fetch('https://backend-plant-ai.onrender.com/predict_crop/basic', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(payload),
-        });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-        console.log('Received response:', response.status); // Debugging line
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-
-        const data = await response.json();
-        console.log('Received data:', data); // Debugging line
-        setResult(data);
+      const data = await response.json();
+      setResult(data);
     } catch (error) {
-        console.error('Error fetching crop prediction:', error.message); // Debugging line
-        setLocationError('Error fetching crop prediction: ' + error.message);
+      setLocationError('Error fetching crop prediction: ' + error.message);
     } finally {
-        setLoadingCrop(false);
+      setLoadingCrop(false);
     }
-};
+  };
 
   return (
     <div
@@ -148,7 +141,7 @@ const Basic = () => {
             <div className="mt-4 flex flex-col p-4 bg-white bg-opacity-80 rounded-lg shadow-md w-full">
               <h2 className="text-lg font-bold text-center">{t('Prediction Result:')}</h2>
               <p className="text-center">
-                {t('Location')}: <span className="font-semibold">{result.Location}</span>
+                {t('Location')}: <span className="font-semibold">{result.Location} ({result.CountryCode || 'N/A'})</span>
               </p>
               <p className="text-center">{t('Temperature')}: <span className="font-semibold">{result['Temperature (°C)']}</span></p>
               <p className="text-center">{t('Humidity')}: <span className="font-semibold">{result['Humidity (%)']}</span></p>
