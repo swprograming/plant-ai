@@ -113,7 +113,7 @@ const Advanced = () => {
                 const ranges = {
                   N: { min: 0, max: 200 },
                   P: { min: 0, max: 200 },
-                  K: { min: 0, max: 200 },
+                  K: { min: 0, max: 205 },
                   temperature: { min: -50, max: 60 },
                   humidity: { min: 0, max: 100 },
                   ph: { min: 0, max: 14 },
