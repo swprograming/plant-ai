@@ -109,6 +109,17 @@ const Advanced = () => {
                   ph: t('pH value of soil'),
                   rainfall: t('Rainfall (mm)'),
                 };
+
+                const ranges = {
+                  N: { min: 0, max: 200 },
+                  P: { min: 0, max: 200 },
+                  K: { min: 0, max: 200 },
+                  temperature: { min: -50, max: 60 },
+                  humidity: { min: 0, max: 100 },
+                  ph: { min: 0, max: 14 },
+                  rainfall: { min: 0, max: 5000 },
+                };
+
                 return (
                   <div key={key} className="flex flex-col mb-4">
                     <label className="text-sm font-medium text-black">{labels[key]}</label>
@@ -119,8 +130,11 @@ const Advanced = () => {
                       placeholder={labels[key]}
                       value={formData[key]}
                       onChange={handleChange}
+                      min={ranges[key].min}
+                      max={ranges[key].max}
                       required
                     />
+                    <span className="text-gray-500 text-xs mt-1">{t('Range')}: {ranges[key].min} - {ranges[key].max}</span>
                   </div>
                 );
               })}
