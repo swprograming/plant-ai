@@ -73,7 +73,7 @@ const Basic = () => {
 
         console.log('Sending payload:', payload); // Debugging line
 
-        const response = await fetch('http://localhost:5000/predict_crop/basic', {
+        const response = await fetch('https://backend-plant-ai.onrender.com/predict_crop/basic', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
