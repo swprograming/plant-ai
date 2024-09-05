@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Advanced = () => {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
-  
+
   const [formData, setFormData] = useState({
     N: '',
     P: '',
@@ -21,7 +21,11 @@ const Advanced = () => {
   const [loadingStatus, setLoadingStatus] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
+    const { id, value } = e.target;
+    // Use regex to allow only numbers, decimal points, and control characters
+    if (/^(\d+(\.\d*)?|\.\d+)?$/.test(value) || value === '') {
+      setFormData({ ...formData, [id]: value });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -124,14 +128,12 @@ const Advanced = () => {
                   <div key={key} className="flex flex-col mb-4">
                     <label className="text-sm font-medium text-black">{labels[key]}</label>
                     <input
-                      type="number"
+                      type="text"
                       id={key}
                       className="w-full border-2 border-[#00df9a] p-2 mt-1 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#00df9a] transition duration-300"
                       placeholder={labels[key]}
                       value={formData[key]}
                       onChange={handleChange}
-                      min={ranges[key].min}
-                      max={ranges[key].max}
                       required
                     />
                     <span className="text-gray-500 text-xs mt-1">{t('Range')}: {ranges[key].min} - {ranges[key].max}</span>
