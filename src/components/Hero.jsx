@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
-import bg from '../assets/bg.jpg';
+import bg from '../assets/bg_3.jpg';
 import { useTranslation } from 'react-i18next';
 
 const Hero = ({ onGetStarted }) => {

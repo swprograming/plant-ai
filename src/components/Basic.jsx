@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import bg from '../assets/bg.jpg';
+import bg from '../assets/bg_3.jpg';
 import { cropData } from './Data';
 import { useTranslation } from 'react-i18next';
 
