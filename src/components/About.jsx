@@ -1,5 +1,5 @@
 import React from 'react';
-import bg from '../assets/bg_3.jpg';
+import bg from '../assets/bg.jpg';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
