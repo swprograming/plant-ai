@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import bg from '../assets/bg_3.jpg';
+import bg from '../assets/bg.jpg';
 import { cropData } from './Data';
 import { useTranslation } from 'react-i18next';
 
