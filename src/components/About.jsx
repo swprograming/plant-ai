@@ -22,18 +22,6 @@ const About = () => {
           <p className='text-gray-700 mb-4'>
             {t('ap3')}
           </p>
-
-          {/* Team Members Section */}
-          <h2 className='text-2xl font-bold text-center text-[#00df9a] mt-6'>{t('Our Team')}</h2>
-          <ul className='text-gray-700 mt-4 flex flex-col items-center'>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Solomon Wondwosen</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Selhadin Kedir Hussen</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Wongel Zerihun</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Lidya Zerihun Taye</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Liya Aschalew Fikre</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Bornabek Tesfa</li>
-            <li className='mb-2 text-lg font-semibold transition duration-300 hover:text-[#00df9a]'>Beka Fekadu</li>
-          </ul>
         </div>
       </div>
     </div>
