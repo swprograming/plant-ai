@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# 🌿 Plant AI - Plant Classification with Machine Learning
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Demo:** [Live Website](http://plant-ai-group1.netlify.app/)  
+**GitHub Repository:** [Plant AI GitHub](https://github.com/swprograming/plant-ai)
 
-## Available Scripts
+## 🎯 Project Overview
+Plant AI is an AI-powered plant identification tool that allows users to classify plant species by simply uploading an image. Using machine learning and deep learning models, the system can recognize and predict plant types, helping with tasks like plant identification and disease detection. The project is designed for a practical application in agriculture, helping farmers and plant enthusiasts identify plants quickly.
 
-In the project directory, you can run:
+## 🚀 Features
+- **Plant Identification:** Upload an image to classify plant species.
+- **AI-Powered Classification:** Uses a machine learning model to predict plant species.
+- **Web-Based Interface:** User-friendly interface hosted on Netlify.
+- **Fast Processing:** The model quickly processes the image for real-time feedback.
 
-### `yarn start`
+## 🧑‍💻 Technologies Used
+- **Frontend:** React.js (for the user interface)
+- **Backend:** Flask (Python API for processing)
+- **Machine Learning:** TensorFlow, Keras (for plant classification model)
+- **Deployment:** Netlify (for hosting the frontend), GitHub (for code management)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📝 Installation & Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To run this project locally, follow these steps:
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Clone the repository:
+```bash
+git clone https://github.com/swprograming/plant-ai.git
